@@ -8,6 +8,8 @@ const root = require("./routes/root");
 const employees = require("./routes/api/employees");
 const register = require("./routes/register");
 const auth = require("./routes/auth");
+const verifyJWT = require("./middleware/verifyJWT");
+const cookieParser = require("cookie-parser");
 
 const app = express();
 
@@ -27,12 +29,17 @@ app.use(express.urlencoded({ extended: false }));
 //built-in middleware for json
 app.use(express.json());
 
+//middleware for cookies
+app.use(cookieParser());
+
 //serve static files
 app.use("/", express.static(path.join(__dirname, "/public")));
 
 app.use("/", root);
 app.use("/register", register);
 app.use("/auth", auth);
+
+app.use(verifyJWT);
 app.use("/employees", employees);
 
 app.all("*", (req, res) => {

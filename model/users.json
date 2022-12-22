@@ -1,18 +1,1 @@
-[
-  {
-    "username": "walt1",
-    "password": "$2b$10$33Q9jtAoaXC4aUX9Bjihxum2BHG.ENB6JyoCvPjnuXpITtUd8x8/y"
-  },
-  {
-    "username": "walt2",
-    "password": "$2b$10$cvfmz./teMWDccIMChAxZ.HqgL3eoQGYTm1z9lGy5iRf8D7NNargC"
-  },
-  {
-    "username": "naeem",
-    "password": "$2b$10$x8ZGCrHbcI3Wohm8ZmMrq.fxJAfdUxkv8mZB37Xucg58xnWwvH30a"
-  },
-  {
-    "username": "naeem2",
-    "password": "$2b$10$uaMk8ZgYKzpfLkc2uE7vpurIyb3Pf8h07fVHMjlZO2EA0wSmVNefK"
-  }
-]
+[{"username":"walt1","password":"$2b$10$33Q9jtAoaXC4aUX9Bjihxum2BHG.ENB6JyoCvPjnuXpITtUd8x8/y"},{"username":"walt2","password":"$2b$10$cvfmz./teMWDccIMChAxZ.HqgL3eoQGYTm1z9lGy5iRf8D7NNargC"},{"username":"naeem2","password":"$2b$10$uaMk8ZgYKzpfLkc2uE7vpurIyb3Pf8h07fVHMjlZO2EA0wSmVNefK"},{"username":"naeem","password":"$2b$10$x8ZGCrHbcI3Wohm8ZmMrq.fxJAfdUxkv8mZB37Xucg58xnWwvH30a","refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hZWVtIiwiaWF0IjoxNjcxNzI5NDUzLCJleHAiOjE2NzE4MTU4NTN9.sOat8d7cbDe8f4iAET6FBRfZgk0pCHOZqyo7RjFA17M"}]
