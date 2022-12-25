@@ -7,11 +7,11 @@ const { logger } = require("./middleware/logEvents");
 const errorHandler = require("./middleware/errorHandler");
 const root = require("./routes/root");
 const employees = require("./routes/api/employees");
+const users = require("./routes/api/users");
 const register = require("./routes/register");
 const auth = require("./routes/auth");
 const refresh = require("./routes/refresh");
 const logout = require("./routes/logout");
-// const verifyJWT = require("./middleware/verifyJWT");
 const credentials = require("./middleware/credentials");
 const cookieParser = require("cookie-parser");
 const mongoose = require("mongoose");
@@ -53,8 +53,8 @@ app.use("/auth", auth);
 app.use("/refresh", refresh);
 app.use("/logout", logout);
 
-// app.use(verifyJWT);
 app.use("/employees", employees);
+app.use("/users", users);
 
 app.all("*", (req, res) => {
   res.status(404);

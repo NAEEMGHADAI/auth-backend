@@ -58,13 +58,17 @@ const getEmployee = async (req, res) => {
   if (!req?.params?.id) {
     res.status(400).json({ message: "ID parameter is required" });
   }
-  let employee = await Employee.findOne({ _id: req.params.id }).exec();
-  if (!employee) {
-    return res
-      .status(204)
-      .json({ message: `No Employee matches ID ${req.params.id}.` });
+  if (req.params.id.match(/^[0-9a-fA-F]{24}$/)) {
+    let employee = await Employee.findOne({ _id: req.params.id }).exec();
+    console.log(employee);
+    if (!employee) {
+      return res
+        .status(204)
+        .json({ message: `No Employee matches ID ${req.params.id}.` });
+    }
+    return res.json(employee);
   }
-  res.json(employee);
+  res.status(400).json({ message: "Invalid ID" });
 };
 
 module.exports = {
